@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "插件初体验",
+    "description": "你好，浏览器插件开发！",
+    "version": "1.0",
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "icons/icon128.png"
+    }
+}
