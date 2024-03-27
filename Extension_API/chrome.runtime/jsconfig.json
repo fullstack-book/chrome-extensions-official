@@ -1,0 +1,7 @@
+{
+  "typeAcquisition": {
+    "include": [
+      "chrome" // 使用之前先全局安装：npm -g i @types/chrome -D
+    ]
+  }
+}
