@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrome.cookies</title>
+    <script src="popup.js"></script>
+    <style>
+        body {
+            width: 200px;
+        }
+
+        button {
+            width: 100px;
+        }
+
+        .cookie_container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>千图网cookies操作</p>
+    <div class="cookie_container">
+        <button class="get_qt_type">获取qt_type cookie</button>
+        <button class="get_all_cookies">获取全部 cookies</button>
+        <button class="set_cookie">设置 cookie</button>
+        <button class="remove_cookie">移除 cookie</button>
+    </div>
+</body>
+
+</html>
