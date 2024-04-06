@@ -1,6 +1,15 @@
 chrome.runtime.onInstalled.addListener(async () => {
-  // // 初始化版本
-  // chrome.storage.local.set({ version: chrome.runtime.getManifest().version });
+  // 移除所有数据
+  chrome.storage.local.clear()
+  // 初始化版本
+  chrome.storage.local.set({ version: chrome.runtime.getManifest().version });
+  // 监听数据变化
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    Object.keys(changes).forEach((key) => {
+      const { oldValue, newValue } = changes[key];
+      console.log(`${key}: ${oldValue} -> ${newValue}`);
+    });
+  });
 
   // // 获取当前版本
   // chrome.storage.local.get("version", (data) => {
@@ -25,9 +34,9 @@ chrome.runtime.onInstalled.addListener(async () => {
   //   console.log("all data removed");
   // });
 
-  chrome.storage.session.set({ version: chrome.runtime.getManifest().version });
+  // chrome.storage.session.set({ version: chrome.runtime.getManifest().version });
 
-  chrome.storage.session.get("version", (data) => {
-    console.log("version:", data.version);
-  });
+  // chrome.storage.session.get("version", (data) => {
+  //   console.log("version:", data.version);
+  // });
 });
