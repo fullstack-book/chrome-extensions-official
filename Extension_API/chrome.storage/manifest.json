@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "chrome.storage",
+    "description": "chrome.storage API 基础用法",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
